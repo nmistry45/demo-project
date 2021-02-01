@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+		<meta name="google-signin-client_id" content="972149482119-17dp8r9chn5u7l8ncltbgevrii7dar4m.apps.googleusercontent.com">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+		<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+		<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+		<link rel="stylesheet" type="text/css" href="main3.css">
+		<link rel="stylesheet" type="text/css" href="EH_login1.css">
+		<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+</head>
+<body>
+
+	<div class="login">
+		<img src="l1.png" class="l1">
+		<h1>Login Here</h1>
+		<form action="validation.php" method="POST">
+			<div class="textbox">
+				<input type="text" name="username" placeholder="Username" required="">
+			</div>
+			<div class="textbox">
+				<input type="password" placeholder="Password" name="password" required=""><br><br>
+			</div>
+			<input type="submit" name="" value="Login">
+
+			<div id="my-signin2"></div>
+		  	<script>
+		    function onSuccess(googleUser) {
+		      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+		    }
+		    function onFailure(error) {
+		      console.log(error);
+		    }
+		    function renderButton() {
+		      gapi.signin2.render('my-signin2', {
+		        'scope': 'profile email',
+		        'width': 240,
+		        'height': 50,
+		        'longtitle': true,
+		        'theme': 'dark',
+		        'onsuccess': onSuccess,
+		        'onfailure': onFailure
+		      });
+		    }
+		  	</script>
+		  	<!-- <a href="EH_login1.html" onclick="signOut();">Sign out</a> -->
+			<!-- <script>
+			  function signOut() {
+			    var auth2 = gapi.auth2.getAuthInstance();
+			    auth2.signOut().then(function () {
+			      console.log('User signed out.');
+			    });
+			  }
+			</script> -->
+		  	<br>
+			<a href="EH_signup.html">Don't have an account?</a>	
+		</form>
+	</div>
+
+	<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header d-flex flex-row">
+		<div class="header_content d-flex flex-row align-items-center">
+			<!-- Logo -->
+			<div class="logo_container">
+				<div class="logo">
+					<img src="logo1.png" alt="">
+				</div>
+			</div>
+
+			<!-- Main Navigation -->
+			<nav class="main_nav_container">
+				<div class="main_nav">
+					<ul class="main_nav_list">
+						<li class="main_nav_item"><a href="EH_MAIN.html">home</a></li>
+						<li class="main_nav_item">
+							<div class="dropdown">
+								<button class="dropbtn">streams
+									<i class="fa fa-caret-down"></i>
+								</button>
+								<div class="dropdown-content">
+									<a href="IT.html">Information Technology</a>
+									<a href="#">Computer Science</a>
+									<a href="#">Electronics</a>
+								</div>
+							</div>
+						</li>
+						<li class="main_nav_item"><a href="#">about us</a></li>
+						<li class="main_nav_item"><a href="contact.html">contact us</a></li>
+						<li class="main_nav_item"><a href="EH_login1.html">login</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="header_side d-flex flex-row justify-content-center align-items-center">
+			<img src="images/phone-call.svg" alt="">
+			<span>+91 9819 6043 36</span>
+		</div>
+
+		<!-- Hamburger -->
+		<div class="hamburger_container">
+			<i class="fas fa-bars trans_200"></i>
+		</div>
+
+	</header>
+	
+	<!-- Menu -->
+	<div class="menu_container menu_mm">
+
+		<!-- Menu Close Button -->
+		<div class="menu_close_container">
+			<div class="menu_close"></div>
+		</div>
+
+		<!-- Menu Items -->
+		<div class="menu_inner menu_mm">
+			<div class="menu menu_mm">
+				<ul class="menu_list menu_mm">
+					<li class="menu_item menu_mm"><a href="EH_MAIN.html">Home</a></li>
+					<li class="menu_item menu_mm">
+						<div class="dropdown2">
+								<button class="dropbtn2">Streams
+									<!-- <i class="fa fa-caret-down"></i> -->
+								</button>
+								<div class="dropdown-content2">
+									<a href="IT.html">Information Technology</a>
+									<a href="#">Computer Science</a>
+									<a href="#">Electronics</a>
+								</div>
+						</div>
+					<li class="menu_item menu_mm"><a href="#">About us</a></li>
+					<li class="menu_item menu_mm"><a href="contact.html">Contact Us</a></li>
+					<li class="menu_item menu_mm"><a href="EH_login1.html">Login</a></li>
+				</ul>
+
+				<!-- Menu Social -->
+				
+				<div class="menu_social_container menu_mm">
+					<ul class="menu_social menu_mm">
+						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
+						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="js/custom.js"></script>
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
+</body>
+</html>
